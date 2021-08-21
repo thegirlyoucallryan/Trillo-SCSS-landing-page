@@ -1,0 +1,507 @@
+//LOGO
+
+.logo{
+    height: 3.25rem;
+    margin-left: 2.9rem;
+
+}
+
+.header__logo-span{
+
+    font-size: 3rem;
+    font-weight: 100;
+    flex: 1;
+    
+    color: var(--color-primary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transform: skewX(10deg);
+    transition: all .5s;
+}
+
+    .header__logo-span:hover {
+       transform: skewX(-20deg);
+       color: var(--color-primDark);
+
+    }
+   
+    
+  
+
+
+
+
+//SEARCH
+
+.search{
+   
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__input{
+        font-family: inherit;
+        color: inherit;
+        background-color: var(--grey-light-2);
+        border: none;
+        border-radius: 100px;
+        padding: 1rem 2rem;
+        width: 90%;
+        margin-right: -3rem;//this is how icon is in searchbar
+        transition: all .2s;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--grey-dark-3);
+            color: var(--grey-light-1);
+            
+        }
+        &::-webkit-input-placeholder{
+            color: var(--grey-dark-3);
+        }
+    }
+
+ &__input:focus + &__button{
+                background-color: var(--grey-dark-3);
+                fill: var(--grey-light-1)
+            }
+        
+
+       
+
+
+
+
+
+    
+
+    &__button{
+        border: none;
+        background-color: var(--grey-light-2);
+        margin-top: .2rem;
+
+        &:focus{
+            outline: none;
+            background-color: var(--grey-dark-3)
+        }
+        &:active{
+            transform: translateX(-.1rem);
+            background-color: var(--grey-dark-3)
+        }
+
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+
+//NAVIGATION
+
+
+.user-nav{
+
+    display: flex;
+    flex: 0 0 18%;
+    justify-content: space-evenly;
+    align-self: stretch;
+   
+
+    & > *{
+        cursor: pointer;
+        padding: 1rem 2.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+        &:hover{
+            background-color: var(--grey-light-2);
+            fill: var(--grey-dark-3);
+        }
+    }
+
+
+    &__icon-box{
+        position: relative;
+    }
+
+    &__icon{
+        color: var(--grey-dark-3);
+        height: 2.25rem;
+        width: 2.24rem;
+        position: relative;
+        
+    }
+
+    &__user-photo{
+
+        height: 3.8rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    &__notification{
+        color: white;
+        font-weight: 800;
+        font-size: inherit;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        padding: .5rem;
+        height: 1.9rem;
+        width: 1.9rem;
+        position: absolute;
+        top: 16px;
+        left: 3.8rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user-name{
+        color: var(--color-primDark);
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+}
+
+
+////SIDE NAV
+
+
+.side-nav{
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+
+    &__item{
+        position: relative;
+    }
+
+
+
+        
+        &__item::before{
+
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: var(--color-primLight);
+            transform: scaleY(0);
+            transition: transform .3s,
+                        width .4s cubic-bezier(1,0,0,1) .2s,
+                        background-color .1s;
+
+
+        }
+
+
+        &__item:hover::before,
+        &__item--active::before {
+            transform: scaleY(1);
+            width: 100%;
+            color: black;
+        }
+
+        &__item:active::before{
+            background-color: var(--color-primary);
+        }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        z-index: 10;
+        position: relative;
+        
+    }
+
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+        margin-right: .6rem;
+    }
+}
+
+
+.legal{
+    font-size: 1rem;
+    color: var(--grey-light-1);
+    text-align: center;
+    padding: 2rem;
+
+    
+    
+}
+
+
+/////GALLERY
+
+
+.gallery{
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;//whitespace?
+        position: relative;
+        
+    }
+    // &__photo:hover {
+    //    width: 220%;
+    //    height: 100%;
+    //    flex: 1;
+    //     z-index: 5;
+    
+
+        
+        
+
+        
+    // }
+}
+
+////OVERVIEW
+
+.overview{
+    display: flex;
+    border-bottom: 1px solid var(--grey-light-3);
+    align-items: center;
+
+
+    &__heading{
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        font-size: 2.3rem;
+        font-weight: 300;
+
+
+    }
+
+&__stars{
+    display: flex;
+    flex: 1;
+}
+
+
+    &__icon-star,
+    &__icon-location{
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: var(--color-primDark);
+       
+
+
+    }
+
+    &__location{
+     
+    }
+
+    &__rating{
+        background-color: var(--color-primDark);
+        padding: 1.9rem;
+      
+        text-align: center;
+        color: white;
+    }
+
+    &__rating-avg{
+        font-weight: 200;
+        font-size: 2.25rem;
+        letter-spacing: 2px;
+
+
+
+    }
+
+    &__rating-votes{
+        font-weight: 400;
+        font-size: 1.1rem;
+
+
+    }
+
+}
+
+.btn-inline{
+    border: none;
+    margin-right: 1rem;
+    color: var(--color-primary);
+    background-color: transparent;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    transition: all .3s;
+    
+
+    &:hover{
+        letter-spacing: 2px;
+    }
+        color:var(--color-primDark)
+    }
+    
+
+
+}
+
+////PARAGRAPH
+
+
+.paragraph:not(:last-child){
+  
+    margin-bottom: 3rem;
+   } 
+
+.list{
+    list-style: none;
+    border-bottom: .8px solid var(--grey-light-2);
+    border-top: .8px solid var(--grey-light-2);
+    display: flex;
+    padding: 3rem;
+    flex-wrap: wrap;
+
+    &__item{
+        flex: 0 0 50%;
+        margin-bottom: .6rem;
+        display: flex;
+        align-items: center;
+
+    }
+    &__item::before{
+        content: ' ';
+        display: inline-block;
+        background-image: url(../img/chevron-thin-right.svg);
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+        
+    }
+}
+
+
+////RECOMMEND
+
+
+.recommend{
+    font-size: 1.4rem;
+    color: var(--grey-dark-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+ 
+
+    &__photo{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        margin-right: -1.9rem;
+        
+        border: 2px solid white;
+        box-sizing: content-box;
+        
+        
+
+    }
+
+ 
+}
+
+
+//////REVIEWS
+
+
+.review{
+   
+    box-shadow: 0 3rem 2rem var(--grey-light-3);
+    padding: 3.6rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+
+
+
+   
+
+    &__text{
+        font-family: inherit;
+        font-size: 1.4rem;
+        margin-bottom: 2.3rem;
+        position: relative;
+        z-index: 3;
+        padding-top: 2rem;
+    }
+
+
+    &__photo{
+        border-radius: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1rem;
+    }
+   
+    &__user{
+        display: flex;
+        justify-content: flex start;
+        align-content: center;
+    
+    }
+
+    &__user-name{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+       
+    }
+    &__user-date{
+        font-size: 1.3rem;
+        color: var(--grey-dark-2)
+    }
+
+    &__rating{
+        color: var(--color-primDark);
+        display: flex;
+        font-size: 3.6rem;
+        transform: skewX(-5deg);
+        margin-left: 12rem;
+        
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -13rem;
+        right: 37.5rem;
+        color: var(--grey-light-3);
+        font-size: 28rem;
+        z-index: 1
+    }
+    
+    
+
+}
+
+
+
+
+
+
+
+

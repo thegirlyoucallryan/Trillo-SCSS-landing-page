@@ -1,0 +1,55 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+
+*/
+
+:root {
+    --color-primary: #5fa394; 
+    --color-primLight: #6bd4cf;
+    --color-primDark: #266258;
+
+    --grey-light-1: #faf9f9;
+    --grey-light-2: #f4f2f2;
+    --grey-light-3: #f0eeee;
+    --grey-light-4: #ccc;
+
+    --grey-dark-1: #333;
+    --grey-dark-2: rgb(61, 61, 61);
+    --grey-dark-3: #232323;
+
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;  //1rem = 10px, 10/16px = 62.5
+}
+
+body{
+   font-family: "Open Sans", sans-serif;
+   font-weight: 500;
+   line-height: 1.6;
+   color: var(--grey-dark-3);
+   background-image: linear-gradient(to right bottom, var(--color-primLight) 15%, var(--color-primDark));
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   min-height: 100vh;
+}
