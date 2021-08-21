@@ -7,6 +7,11 @@
     overflow: hidden;
     
 
+    @media only screen and (max-width: $bp_lg){
+        margin: 0;
+
+    }
+
 
 }
 
@@ -19,12 +24,24 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: $bp_phone){
+        flex-wrap: wrap;
+        height: 13.9rem;
+        align-content: space-around;
+     }
+
 
 }
 
 
 .content{
     display: flex;
+
+    @media only screen and (max-width: $bp_tab){
+       flex-direction: column;
+
+    }
+
 
 
 }
@@ -53,6 +70,16 @@
     padding: 4.5rem;
     background-color: var(--grey-light-1);
     border-bottom: 1px solid var(--grey-light-2);
+
+    @media only screen and (max-width: $bp_tab){
+       padding: 2rem;
+       
+ 
+     }
+
+    @media only screen and (max-width: 55em){
+        flex-direction: column;
+    }
     
 }
 
@@ -64,6 +91,16 @@
     background-color: white;
     margin-right: 4.5rem;
     box-shadow: 3px 12px 4px var(--grey-light-2);
+
+    @media only screen and (max-width: $bp_tab){
+       padding: 2.4rem;
+       margin: 0;
+ 
+     }
+
+     @media only screen and (max-width: 55em){
+        margin-bottom: 2rem;
+    }
     
 }
 

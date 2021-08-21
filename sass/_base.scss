@@ -26,6 +26,13 @@ Primary dark: #BA265D
 
 }
 
+$bp_lg: 102.94em;
+$bp_desk:83.75em;
+$bp_tab: 66.81em;
+$bp_tabPort: 55.1em;
+$bp_phone: 33.5em;
+
+
 *{
     margin: 0;
     padding: 0;
@@ -40,6 +47,12 @@ Primary dark: #BA265D
 html{
     box-sizing: border-box;
     font-size: 62.5%;  //1rem = 10px, 10/16px = 62.5
+
+    @media only screen and (max-width: $bp_desk){
+        font-size: 50%;
+        max-width: 100%;
+
+    }
 }
 
 body{
